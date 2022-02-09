@@ -18,61 +18,79 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+     <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+ 
   </head>
   <body>
     <!-- Header -->
     <div class="covid-banner">
-      <div class="container">
-        <h1>COVID-19 INFORMATION</h1>
-        <a href="#">Visit our COVID-19 website for campus updates.</a>
-      </div>
-    </div>
 
+      <div class="covid-container">
+        <p>COVID-19 INFORMATION</p>
+        <h2><a href="#">Visit our COVID-19 website for campus updates.</a>
+          </h2>
+        </div>
+    </div>
+      <!-------------- TITLE -->
     <header class="container">
       <div class="logo">
-        <h1>Kale</h1>
+        <a href=''><h1>Kale</h1></a>
       </div>
+      <!-- -----------END TITLE -->
 
       <div class="navbars">
+  <!-- END FIRST MENU -->        
         <nav class="secondary">
-          <a href="#">Calendars</a>
-          <a href="#">Give</a>
-          <a href="#">News</a>
-          <a href="#">Directories</a>
-          <a href="" class="btn btn-white">
-            <span class="">Search</span>
+          <div class="calendar"><a href="#">Calendars</a></div>
+          <div class="give"><a href="#">Give</a></div>
+          <div class="news"><a href="#">News</a></div>
+          <div class="directories"><a href="#">Directories</a></div>
+  <!-- END FIRST MENU -->
+  
+  
+  <!-- nav buttons -->
+          <div class="search">
+            <a href="" class="btn btn-white">
+              <span class=""><i class="fas fa-search"></i>
+                    Search
+              </span>
+            </a>
+        </div> 
+
+          <a href="" class="btn drop-down">
+            Info for... <span class="icon">▼</span>
           </a>
-          <a href="" class="btn drop-down"
-            >Info for... <span class="icon">▼</span>
-          </a>
+
           <a href="" class="btn btn-secondary"> Go </a>
         </nav>
+  <!--END  nav buttons -->
 
         <nav class="main">
+      <!-- MAIN NAVIGATION w/ DROP DOWNS-->
           <div class="main_nav_item">
-            <a class="main_nav_link" href="/about-yale">About Kale</a>
-            <div class="main_nav_child">
-              <a
-                class="main_nav_child_link"
-                href="/about-yale/leadership-organization"
-                >Leadership &amp; Organization</a
-              >
-              <a class="main_nav_child_link" href="/about-yale/yale-facts"
-                >Kale Facts</a
-              >
-              <a
-                class="main_nav_child_link"
-                href="/about-yale/traditions-history"
-                >Traditions &amp; History</a
-              >
-              <a class="main_nav_child_link" href="http://world.yale.edu"
-                >Kale &amp; the World</a
-              >
-              <a class="main_nav_child_link" href="/about-yale/visiting"
-                >Visiting</a
-              >
-            </div>
+                <a class="main_nav_link" href="/about-yale">
+                  About Kale</a>
+              
+            <!-- ABOUT KALE:drop down menu -->
+                <div class="main_nav_child">
+                  <a class="main_nav_child_link" href="/about-yale/leadership-organization">
+                      Leadership & Organization</a>
+                  <a class="main_nav_child_link" href="/about-yale/yale-facts">
+                    Kale Facts</a>
+                  <a class="main_nav_child_link" href="/about-yale/traditions-history">
+                    Traditions & History</a>
+                  <a class="main_nav_child_link" href="http://world.yale.edu">
+                    Kale & the World</a>
+                  <a class="main_nav_child_link" href="/about-yale/visiting">
+                    Visiting</a>
+              </div>
           </div>
+
+
+    <!-- ACADEMICS DROP-DOWN -->
           <div class="main_nav_item">
             <a class="main_nav_link" href="/academics">Academics</a>
             <div class="main_nav_child">
@@ -105,6 +123,8 @@
               >
             </div>
           </div>
+
+  <!-- ADMISSIONS DROP-DOWN -->
           <div class="main_nav_item">
             <a class="main_nav_link" href="/admissions">Admissions</a>
             <div class="main_nav_child">
@@ -141,6 +161,8 @@
               >
             </div>
           </div>
+
+    <!-- RESEARCH AND COLLECTIONS DROP DOWN -->
           <div class="main_nav_item">
             <a class="main_nav_link" href="/research-collections"
               >Research &amp; Collections</a
@@ -171,6 +193,8 @@
               >
             </div>
           </div>
+
+    <!-- LIFE AT YALE DROP-DOWN -->
           <div class="main_nav_item">
             <a class="main_nav_link" href="/life-yale">Life at Yale</a>
             <div class="main_nav_child">
@@ -200,14 +224,19 @@
             </div>
           </div>
         </nav>
+  <!-- End the ENTIRE (2nd nav)DROP DOWNS -->
       </div>
     </header>
 
-    <!-- Hero -->
 
+
+    <!-- Hero -->
     <div class="container">
+
       <div class="hero">
-        <div class="text">
+
+        <!-- all the text -->
+        <div class="hero-text">
           <h2>Campus & Community</h2>
           <div class="divider"></div>
           <h1>
@@ -216,230 +245,265 @@
           <p>
             Kale details its strategy for acheiving "carbon zero" status on
             campus by 2050, a sweeping plan to reshape the university's approach
-            to energy consumption
+            to energy consumption.
           </p>
-
-          <a href="" class="btn btn-outline"
-            >Learn More
+<!-- learn more button -->
+          <a href="" class="btn btn-outline">
+            <p>Learn More</p>
             <span class="material-icons-outlined"> arrow_right </span>
           </a>
+        <!-- END learn more button -->
         </div>
+<!-- end text -->
 
+<!-- picture of school -->
         <div class="image">
           <img src="./images/campus.jpg" alt="" srcset="" />
         </div>
 
         <!-- <div class="feature-archive">
         
-      </div> -->
+        </div> -->
 
-        <a href="#" class="feature-archive btn"> The Feature Archive ▸ </a>
+        <a href="#" class="feature-archive btn"> 
+          The Feature Archive ▸ </a>
       </div>
     </div>
+
+
+<!-- -------- -->
+
+
+    <!-- TIME FOR THE FUN AAUUUUGHHHHHHHH -->
+
 
     <!-- A Closer Look -->
     <div class="container">
       <div class="headings">
         <h2 class="">The Parts That Make Kale Whole</h2>
 
-        <h3 class="">A closer look for the curious</h3>
+        <h1 class="">A closer look for the curious</h1>
       </div>
     </div>
+    <!-- grid fun fun time -->
+    <div class="grid-fun">
+      <div class="hidden">null</div>
+      
+      <!-------------- -->
+      <div class="a">
+        <div class="a-buttons">
+            <div class="btn btn-explorebytopic">
+              <a href=''>EXPLORE BY TOPIC</a>
+            </div>
+          <p>─  or  ─</p>
+            <div class=" btn btn-shuffle">
+              <a href = ''>SHUFFLE</a>
+            </div>
+        </div>
+      </div>
 
-    <!-- Footer -->
-    <footer id="footer" class="footer">
-      <!-- Footer Row -->
-      <div class="footer-row">
-        <!-- Footer Cell -->
-        <div class="footer-cell">
-          <!-- Footer Nav Section -->
-          <div class="footer_nav_section">
-            <div class="region region-footer">
-              <nav class="footer_nav help_nav" >
-                <h2 class="footer_nav_label help_nav_label" id="help_nav_label">
-                  Helpful Links
-                </h2>
-                <div
-                  class="footer_nav_list"
-                >
-                  <a class="footer_nav_link " href="/contact-us"
-                    >Contact Us</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://covid19.yale.edu"
-                    >COVID-19 Info</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://your.yale.edu/work-yale/careers"
-                    >Careers</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://emergency.yale.edu/"
-                    >Emergency Info</a
-                  ><a
-                    class="footer_nav_link "
-                    href="/privacy-policy"
-                    >Privacy Policy</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://your.yale.edu/community/public-safety"
-                    >Public Safety</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://usability.yale.edu/web-accessibility/accessibility-yale"
-                    >Accessibility at Kale</a
-                  ><a
-                    class="footer_nav_link "
-                    href="/nondiscrimination"
-                    >Nondiscrimination &amp; Title&nbsp;IX</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://westcampus.yale.edu/"
-                    >Kale West Campus</a
-                  ><a
-                    class="footer_nav_link "
-                    href="https://communications.yale.edu/mobile"
-                    >Kale Mobile</a
-                  >
-                </div>
-              </nav>
-              <nav
-                class="footer_nav visitor_nav"
-              >
-                <h2
-                  class="footer_nav_label visitor_nav_label"
-                  id="visitor_nav_label"
-                >
-                  Visiting Kale
-                </h2>
-                <div class="footer_nav_list visitor_nav_list">
-                  <a
-                    class="footer_nav_link visitor_nav_link"
-                    href="https://visitorcenter.yale.edu/tours"
-                    >Campus Tours</a
-                  ><a
-                    class="footer_nav_link visitor_nav_link"
-                    href="/about-yale/visiting"
-                    >Maps &amp; Directions</a
-                  ><a
-                    class="footer_nav_link visitor_nav_link"
-                    href="https://visitorcenter.yale.edu/"
-                    >Kale Visitor Center</a
-                  ><a
-                    class="footer_nav_link visitor_nav_link"
-                    href="/research-collections/museums-galleries"
-                    >Museums &amp; Galleries</a
-                  ><a
-                    class="footer_nav_link visitor_nav_link"
-                    href="/life-yale/new-haven"
-                    >New Haven</a
-                  ><a
-                    class="footer_nav_link visitor_nav_link"
-                    href="/about-yale/visiting"
-                    >More Visit Resources</a
-                  >
-                </div>
-              </nav>
+      <!-------------- -->
+      <div class="b">
+        
+        <div class="hark-words">
+          <div class="bigboy-underline"><p>Places</p></div>
+          <h1>Harkness Tower</h3>
+          <p>Soaring 216 feet tall, Harkness Tower
+            is a Kale icon and home to the 54-bell
+            Kale Memorial Carillon.</p>
+        
+        <div class="grid-normal-words">
+<!-- some buttons for Harkness Tower -->
+            <div class="hark-buttons">
+              <div class="btn hark-explorebtn">
+                <a href =''>EXPLORE THE TOWER</a>
+              </div>
+              <div class="btn hark-requestbtn">
+                <a href =''>REQUEST A salad</a>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-------------- -->
+      <div class="c">
+        
+
+        <div class='text'><a href="">
+          <h1>Kale School of Plants</h1>
+          <p>EXPLORE THE SCHOOL</p>
+          </a>
+        </div>
+      </div>
+
+      <!-------------- -->
+      <div class="d">
+        
+        <div class='text'><a href="">
+          <h1>Commencement</h1>
+          <p>EXPERIENCE COMMENCEMENT</p>
+          </a>
+        </div>
+      </div>
+      <!-------------- -->
+      <div class="e">
+        
+        <div class='text'><a href="">
+          <h1>1491 The Great Kale</h1>
+          <p>EXPLORE THE GARDEN</p>
+          </a>
+        </div>
+      </div>
+      <!-------------- -->
+      <div class="f">
+        
+        <div class="grid-normal-words">
+          <div class="bigboy-underline"><p>EXPERIENCES</p></div>
+            <h1>Kale Day</h1>
+            <p>Kale day, a Kale College tradition,
+              occurs during Commencement weekend.
+              It includes the awarding of salad,
+              toppings, gardening tools, and potting soil; 
+              an address by a notable gardener; and
+              many great spray bottles.
+            </p>
+            <div class="btn btn-viewphotos">
+              <a href = "">VIEW PHOTOS</a>
             </div>
           </div>
-          <!-- END: Footer Nav Section -->
+      </div>
 
-          <hr class="footer_divider " />
-
-          <!-- Instagram Teaser -->
-          <div class="region region-footer-ig">
-            <!-- Instagram Teaser -->
-            <a
-              class="instagram_teaser"
-              href="//instagram.com/yale/"
-              target="_blank"
-            >
-              <figure class="instagram_teaser_figure responsive_image">
-                <span class="instagram_teaser_image"
-                  ><img
-                    alt="Handsome Dan with pumpkin"
-                    src="/sites/default/files/images/dan-nov1.jpg"
-                  />
-                </span>
-
-                <figcaption class="instagram_teaser_caption button_text">
-                  Kale on Instagram
-                </figcaption>
-              </figure>
-
-              <span class="overlay_bg"></span>
-            </a>
-            <!-- END: Instagram Teaser -->
+      <!-------------- -->
+      <div class="g">
+        
+        <div class='text'><a href="">
+          <h1>Kale Museum of Salad History</h1>
+          <p>EXPLORE THE MUSEUM</p></a>
           </div>
-          <!-- END: Instagram Teaser -->
-
-          <hr class="divider" />
-
-          <!-- Social Properties -->
-          <div class="social_properties">
-            <div class="region region-footer-social">
-              <!-- Social Nav -->
-              <nav class="social_nav" aria-labelledby="social_nav_label">
-                <h2 class="visually_hidden" id="social_nav_label">
-                  Social Links
-                </h2>
-                <div class="social_nav_list">
-                  <a
-                    class="social_nav_link facebook"
-                    href="https://www.facebook.com/YaleUniversity"
-                    target="_blank"
-                    ><span class="social_nav_link_icon"></span
-                    ><span class="social_nav_link_text">Facebook</span></a
-                  ><a
-                    class="social_nav_link twitter"
-                    href="http://www.twitter.com/yale"
-                    target="_blank"
-                    ><span class="social_nav_link_icon"></span
-                    ><span class="social_nav_link_text">Twitter</span></a
-                  ><a
-                    class="social_nav_link youtube"
-                    href="http://www.youtube.com/yale"
-                    target="_blank"
-                    ><span class="social_nav_link_icon"></span
-                    ><span class="social_nav_link_text">YouTube</span></a
-                  ><a
-                    class="social_nav_link weibo"
-                    href="http://weibo.com/yaleuniversity"
-                    target="_blank"
-                    ><span class="social_nav_link_icon"></span
-                    ><span class="social_nav_link_text">Sina Weibo</span></a
-                  >
-                </div>
-              </nav>
-              <!-- END: Social Nav -->
-
-              <a
-                class="social_all_link button_text button_icon_right_arrow"
-                href="/social-media"
-                >All Social Media</a
-              >
-            </div>
+      </div>
+      <!-------------- -->
+      <div class="h">
+        
+        <div class='text'><a href="">
+          <h1>Kale</h1>
+          <p>EXPLORE THE COLLECTION</p></a>
           </div>
-          <!-- END: Social Properties -->
+      </div>
+      <!-------------- -->
+      <div class="i">
+        
+        <div class='text'><a href="">
+          <h1>Saybrook College</h1>
+          <p>EXPLORE THE COLLEGE</p></a>
+        </div>
+      </div>
+      <!-------------- -->
+      <div class="j">
+        
+        <div class='text'><a href="">
+          <h1>Ezra Stiles College</h1>
+          <p>EXPLORE THE COLLEGE</p></a>
+        </div>
+      </div>
+      <!-------------- -->
 
-          <!-- Legal -->
-          <small class="footer_legal block">
-            <span class="footer_legal_copy"
-              >Copyright © 2021 Kale University</span
-            >
-            <span class="footer_legal_rights">All Rights Reserved</span>
-            <a
-              class="footer_legal_contact"
-              href="/contact-us/contact-web-editor"
-              >Contact Web Editor</a
-            >
-          </small>
-          <!-- END: Legal -->
+    </div>
+
+    <div class="footer2">
+
+      <!-- pic of puppy -->
+      <div class="puppypumpkin">
+          <p><i class="fab fa-instagram"></i> Yale on Instagram</p>
+      </div>
+
+      <!-- first in column -->
+      <div class="left-set">
+        <div class="bigboy-underline2"><p>Helpful Links</p></div>
+          <a href=''><li>Contact Us</li></a>
+          <a href =''><li>Emergency Info</li></a>
+            <a href=''><li>Accessibility at Yale</li></a>
+          </a>
+      </div>
+      <!-- second in column -->
+      <div class="middle-set">
+        <a href =''><li>COVID-19 Info</li></a>
+          <a href =''><li>Privacy Policy</li></a>
+          <a href =''><li>Nondiscrimination & Title IX</li></a>
+      </div>
+      <!-- third in column -->
+      <div class="right-set">
+        <a href =''><li>Careers</li></a>
+          <a href =''><li>Public Safety</li></a>
+          <a href =''><li>Yale West Campus</li></a>
+          <a href =''><li>Yale Mobile</li></a>
+      </div>
+
+  </div>
+
+
+  <!-- THE OTHER NAV THING -->
+    <div class="footer3">
+
+      <!-- first in column -->
+      <div class="left-set">
+          <div class="bigboy-underline2"><p>Visiting Kale</p></div>
+
+          <a href =''><li>Campus Tours</li></a>
+          <a href =''><li>Museums & Galleries</li></a>
+      </div>
+      <!-- second in column -->
+      <div class="middle-set">
+        <a href =''><li>Maps & Directions</li></a>
+          <a href =''><li>New Haven</li></a>
+      </div>
+      <!-- third in column -->
+      <div class="right-set">
+        <div class="under-right-set">
+          <a href =''><li>Yale Visitor Center</li></a>
+          <a href =''><li>More Visit Resources</li></a>  
+        </div>
+      </div>
+    </div>
+        
+    <!-- FINAL BOTTOM AND SOCIAL MEDIA -->
+    <div class="final-bottom">
+
+    <!-- left side thingz -->
+      <div class="left-idk">
+        </hr>
+        <div class="one">
+          <p>Copyright © 2021 Kale University</p>
+        </div>
+
+        <div class="two">
+          <p>All Rights Reserved</p>
+        </div>
+
+          <div class="three">
+            <a href = "">Contact Web Editor</a>
+          </div>
+        
+      </div>   
+
+        <!-- right side social media links -->
+
+        <div class="right-social-media">
+
+          <a href = ''>ALL SOCIAL MEDIA ▸</a>
+
+          <div class="youtube">
+            <a href = ''><i class="fab fa-youtube"></i></a>
+          </div>
+
+          <div class="twitter">
+            <a href = ''><i class="fab fa-twitter"></i></a>
+          </div>   
+
+          <div class="facebook">
+            <a href = ''><i class="fab fa-facebook-square"></i></a>        </div>
 
         </div>
-        <!-- END: Footer Cell -->
-      </div>
-      <!-- END: Footer Row -->
+    </div>
     </footer>
   </body>
 </html>

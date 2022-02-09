@@ -14,13 +14,43 @@
 
 body {
     font-family: 'Crimson Pro', serif;
-
 }
 
 p {
     font-family: 'Gill Sans','Gill Sans MT',Calibri,Arial,sans-serif;
 }
 
+/* COVID SECTION */
+.covid-container{
+    background: rgb(223, 236, 255);
+    padding:27px;
+    padding-left:60px;
+    line-height:2em;
+}
+.covid-container h2 a{
+    color:var(--dark-color);
+    font-weight:100;
+}
+.covid-container p{
+    font-weight: 400;
+}
+/* END COVID SECTION */
+
+/*KALE NAME*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo a{
+    text-decoration: none;
+    color:var(--primary-color);
+    font-size: 45px;
+}
+
+
+/*END KALE NAME */
+
+/* buttons */
 .btn {
     display: block;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -30,29 +60,18 @@ p {
     text-transform: uppercase;
 }
 
-.btn.drop-down .icon {
-    font-size: 0.5rem;
-}
 
-.btn-secondary {
-    background-color: var(--dark-gray);
-    color:white;
-}
+/* END buttons */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
+/*header stuff*/
 
 header {
     display: flex;
     padding: 2rem 0;
 }
 
-header .btn.btn.drop-down {
-    background-color: var(--primary-color);
-    color: white;
-}
+
 
 header .navbars {
     display: flex;
@@ -67,16 +86,62 @@ header nav {
     display: flex;
     flex-direction: row;
     margin-left:auto;
+    align-items: center;
 }
 
 header nav.secondary a {
-    font-size: 0.8rem;
-    display:block;
+    font-size: 0.9rem;
+    /* display:block; */
     padding:1rem;
+    margin-right:2em;
+
     text-decoration: none;
     text-transform: uppercase;
+
     font-family: 'Gill Sans','Gill Sans MT',Calibri,Arial,sans-serif;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
+}
+
+.secondary a:hover{
+    text-decoration: underline;
+}
+
+/* little dot in the calendar, give, news nav */
+
+.give::before{
+    content: "\2022";
+    color:var(--secondary-color);
+    font-size:10px;
+}
+.news::before{
+    content: "\2022";
+    color:var(--secondary-color);
+    font-size:10px;
+}
+.directories::before{
+    content: "\2022";
+    color:var(--secondary-color);
+    font-size:10px;
+}
+
+/* end link words */
+
+
+
+/* -------------------buttons */
+
+/*search btn*/
+.search{
+    color:var(--primary-color);
+}
+.search a:hover{
+    text-decoration: none;
+    background-color:rgb(247, 247, 247);
+}
+.fa-search{
+    color:var(--primary-color);
+    font-size:10px;
+    color:#00356b;
 }
 
 header .btn-white{
@@ -87,21 +152,70 @@ header .btn-white{
     position: relative;
     height: 50px;
 }
+/*end search btn*/
 
+
+/*"info..." for btn*/
+header .btn.btn.drop-down {
+    background-color: var(--primary-color);
+    color: white;
+    margin-left:-1.3em;
+}
+.btn.btn.drop-down:hover{
+    text-decoration: none;
+    color:#5396e9;
+}
+.btn.drop-down .icon {
+    padding-left:15px;
+    font-size: 0.5rem;
+}
+/*end "info for..." btn*/
+
+
+/*GO button*/
+.btn.btn-secondary{
+    background-color: var(--dark-gray);
+    color:white;
+    margin-left:-1.7em;
+    border:1px solid var(--dark-gray);
+    text-decoration: none;
+}
+.btn.btn-secondary:hover{
+    transition:0.3s;
+    background-color:white;
+    color: var(--dark-gray);
+    text-decoration: none;
+
+}
+/*END go button*/
+
+/* ---------END ALL BUTTONNSSSS */
+
+
+/* ABOUT YALE, ACADEMICS, ADMISSIONS NAV */
 header nav.main {
     display: flex;
 }
 
 header nav.main .main_nav_item {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .main_nav_item {
     position: relative;
+    transition: all 0.4s;
+
+}
+.main_nav_item:hover{
+    box-shadow: inset 4px 0 0 var(--primary-color), inset 0 1px 0 #ddd, inset -1px 0 0 #ddd, inset 0 -1px 0 #ddd;
+}
+.main_nav_item a:hover{
+    color:var(--secondary-color);
 }
 
+/*-------drop down menu items*/
 .main_nav_link {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-decoration: none;
     display: block;
     color: var(--primary-color);
@@ -109,8 +223,9 @@ header nav.main .main_nav_item {
     z-index: 5;
     box-shadow: inset 4px 0 0 transparent, inset 0 1px 0 transparent, inset -1px 0 0 transparent;
     transition: all .25s .1s;
+    
 }
-
+/* PAY ATTENTIONT TO THESE RIGHT HERERERERERE */
 .main_nav_child {
     background-color: #fff;
     display: block;
@@ -119,11 +234,13 @@ header nav.main .main_nav_item {
     left: 0;
     z-index: 1;
     box-shadow: inset 4px 0 0 var(--primary-color), inset 0 1px 0 #ddd, inset -1px 0 0 #ddd, inset 0 -1px 0 #ddd;
-    margin-top: -1px;
+    
+    margin-top: 30px;
     padding: 26px 24px;
     opacity: 0;
     visibility: hidden;
     transition: opacity .25s .1s,visibility .25s .1s;
+
 }
 
 .main_nav_link:hover + .main_nav_child, .main_nav_child:hover {
@@ -136,30 +253,103 @@ header nav.main .main_nav_item {
     left: auto;
     box-shadow: inset -4px 0 0 var(--primary-color), inset 0 1px 0 #ddd, inset 1px 0 0 #ddd, inset 0 -1px 0 #ddd;
 }
+.main_nav_child{
+    display:flex;
+    flex-direction:column;
+}
+.main_nav_child a{
+    text-decoration: none;
+    color:#00356b;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    padding:10px;
+}
+/*END hea
+der and DROP DOWN NAV stuff*/
 
 
 
+
+/* HERO SECTION */
 .hero {
     display: grid;
     grid-template-rows: 60px 1fr 60px ;
     grid-template-columns: 20% 30% 25% 25% ;
 }
 
-.hero .text {
-    background-color: rgba(255,255,255,0.7);
+
+/* TEXT */
+.hero .hero-text {
+    background-color: rgba(248, 248, 248, 0.7);
+    /* background-color: #4a4a4a; */
     grid-column: 1/3;
     grid-row: 2/3;
     z-index: 1;
+
+    padding:90px;
+}
+.hero-text h2{
+    line-height:4em;
+}
+/* little horizontal line */
+.hero-text::after{
+    content:'';
+
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-top: -23em;
+    background-color: rgb(190, 190, 190);
 }
 
+
+.hero-text h1{
+    color:var(--secondary-color);
+    margin-bottom: 1em;
+}
+.hero-text p{
+    line-height: 1.5em;
+    font-size: 18px;
+}
+/* END TEXT */
+
+/* LEARN MORE BUTTON */
+.btn.btn-outline{
+    border-radius: .5em;
+    margin-top:4em;
+    border:1px solid #ddd;
+    width:35%;
+    display:flex;
+    color:#222;
+    transition:all 0.4s;
+
+
+}
+.btn.btn-outline p{
+    font-size: 12px;
+    font-weight:bold;
+    /* border:1px solid green; */
+    width:70%;
+    margin-top:.2em;
+}
+.material-icons-outlined{
+    flex-direction: row;
+    /* border:1px solid red; */
+}
+.btn.btn-outline:hover{
+
+    color:white;
+    background-color: var(--secondary-color);
+}
+/* END LEARN MORE BUTTON */
+
 .hero .image {
-    background-color: gold;
     grid-column: 2/5;
     grid-row:1/5;
 }
 
 .hero .image img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .hero .feature-archive {
@@ -172,5 +362,544 @@ header nav.main .main_nav_item {
     text-transform: uppercase;
     text-align: center;
     padding: 20px;
-    text-decoration: none;;
+    text-decoration: none;
+    transition: all 0.4s;
 }
+.feature-archive:hover{
+    background-color: var(--secondary-color);
+}
+
+
+
+/* ----END HERO-------- */
+
+
+
+/* TIME FOR THE REAL FUN PART............ */
+.headings{
+    margin-top:4em;
+}
+.headings h2{
+    color:var(--secondary-color);
+    font-weight: lighter;
+}
+.headings h1{
+    color: var(--primary-color);
+    margin-bottom: 2em;
+}
+.grid-fun{
+    background-color: var(--primary-color);
+    /* height:relative;
+    width:relative; */
+    display:grid;
+    padding:50px;
+    grid-template-rows: 3em 15em 15em 5em 5em 5em;
+    grid-template-columns: 2fr 1fr 1fr 2fr 2fr 1fr;
+}
+.hidden{
+    visibility: hidden;
+    grid-column:2;
+}
+
+/* more on A on line 520 */
+.a{
+    grid-row:2;
+    grid-column:1;
+    background-color: var(--secondary-color);
+    
+    text-align: center;
+}   
+.b{
+    grid-row:1/5;
+    grid-column:3/7;
+    background: url("/images/bl0354_07.jpg");
+    background-color: #122335b9;
+    background-blend-mode: overlay;
+
+}
+.c{
+    /* grid-area:d; */
+    background-color: cyan;
+    background:url("/images/brian-mcgowan-w46WZBxI_uk-unsplash.jpg");
+    background-size:cover;
+    background-position-y: center;
+    background-repeat:no-repeat;
+
+    background-color: #00366bb2;
+    background-blend-mode: overlay;
+}
+.d{
+    grid-column: 2/4;
+    grid-row:3;
+    background-color: #00366b;
+}
+.e{
+    grid-column:2/4;
+    grid-row:2/3;
+    background:url("/images/erda-estremera-eUCdBfO381c-unsplash.jpg");
+    background-size:cover;
+    background-position-y: center;
+    background-repeat:no-repeat;
+
+    background-color: rgba(170, 204, 78, 0.288);
+    background-blend-mode: overlay;
+}
+.f{
+    grid-row:4/8;
+    grid-column: 1/4;    
+    background-size:cover;
+    background-position-y: center;
+    background-repeat:no-repeat;
+
+    background:rgba(248, 203, 136, 0.295) url("/images/kiona-lee-e7NPdTlYlz0-unsplash.jpg");
+    background-blend-mode: overlay;
+}
+.g{
+    background-color: #00366b;
+    grid-column:4;
+    grid-row:4/6;
+
+}
+.h{
+    grid-column:5;
+    grid-row:4/7;
+
+    background:url("/images/heather-gill-L5yqGpqQd4I-unsplash.jpg");
+    
+    background-size:cover;
+    background-position-y: center;
+    background-repeat:no-repeat;
+
+    background-color: #7059199d;
+    background-blend-mode: overlay;
+
+}
+.i{
+    grid-column: 4;
+    grid-row:7;
+    background:url("/images/saybrook_college_04.jpg");
+
+    background-color: #5a4925ee;
+    background-blend-mode: overlay;
+    opacity:70%;
+
+}
+.j{
+    grid-column: 5;
+    grid-row:7;
+
+
+    background:url("/images/ezra_stiles_college4.jpg");
+    
+    background-color: #ad8b43ee;
+    background-blend-mode: overlay;
+    opacity:70%;
+}
+
+/* editing the GRID words*/
+/* hark */
+.hark-words{
+    color:white;
+    text-shadow:2px 2px 2px black;
+    padding:40px;
+    font-size: 20px;
+    /* border:1px solid green; */
+    width:60%;
+    margin-left:10em;
+    margin-top:3em;
+}
+.hark-words h1{
+    /* border:1px solid red; */
+    font-size:50px;
+    line-height:2em;
+}
+.hark-words p{
+    font-size:18px;
+    line-height:1.8em;
+}
+/* /////Kale dAY */
+.grid-normal-words{
+    color:white;
+    text-shadow:2px 2px 2px black;
+    padding:40px;
+    font-size: 20px;
+    /* border:1px solid green; */
+    width:85%;
+    margin-left:2em;
+}
+.grid-normal-words h1{
+    /* border:1px solid red; */
+    font-size:50px;
+    line-height:2em;
+}
+.grid-normal-words p{
+    font-size:18px;
+    line-height:1.8em;
+}
+/* the little underline */
+.bigboy-underline p::after{
+    content:'';
+
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: white;
+    content: "";
+    margin-top: 16px;
+}
+
+
+/* editing the GRID links */
+.grid-fun a{
+    text-decoration:none;
+    color:white;
+}
+.text h1{
+    color:white;
+    text-shadow:2px 2px 2px black;
+
+}
+.text{
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.text:hover{
+    transition-duration: 0.3s;
+    transform: translateY(-8px);
+}
+.text{
+    padding:20px;
+    margin-top:4em;
+}
+.text p{
+    font-size: 14px;
+    text-shadow:2px 2px 2px black;
+}
+/* editing SHUFFLE AND EXPLORE BY TOPIC buttons */
+/* ORIGINAL A IS ON LINE 347!!!!!! */
+.a-buttons{
+    margin-top:1.5em;
+    line-height: 3em;
+    text-align: center;
+}
+
+.btn-explorebytopic{
+    color:#00356b;
+    background-color:white;
+    width:80%;
+    margin-left:25px;
+
+    transition: all 0.4s
+}
+.btn-shuffle{
+    width:80%;
+    background-color:#286dc0;
+    border:1px solid white;
+    margin-left:25px;
+
+    transition: all 0.4s
+
+}
+
+/* --------button links */
+.btn-explorebytopic a{
+    color:var(--secondary-color);
+    padding:20px;
+}
+
+.btn-shuffle a{
+    color:white;
+    padding:10px;
+}
+.btn-explorebytopic a:hover{
+    color:black;
+}
+.btn-shuffle:hover{
+    background-color: var(--primary-color);
+    border:none;
+}
+.a-buttons p{
+    color:white;
+}
+/* END EXPLORE BY TOPIC AND SUFFLE (A) */
+
+
+/* KALE DAY BUTTON */
+.btn-viewphotos{
+    font-size:14px;
+    border:1px solid white;
+    width:35%;
+    text-align: center;
+    transition: all 0.4s;
+    margin-top:2em;
+}
+
+.btn-viewphotos:hover{
+    background-color: var(--secondary-color);
+    border:transparent;
+}
+/* HARK  BUTTONS */
+.hark-buttons{
+    display: flex;
+    text-align: center;
+    width:16em;
+    /* border:1px solid green; */
+}
+.hark-explorebtn{
+    border:1px solid rgba(202, 202, 202, 0.507);
+    font-size:14px;
+    margin-right:1em;
+    margin-left:-6em;
+    transition: all 0.4s;
+    width:55%;
+}
+
+.hark-requestbtn{
+    background-color: var(--secondary-color);
+    font-size:14px;
+    transition: all 0.4s;
+    width:55%;
+}
+/* hark button hovers */
+.hark-explorebtn:hover{
+    background-color:var(--primary-color);
+    border:transparent;
+}
+.hark-requestbtn:hover{
+    background-color:var(--primary-color);
+    border:transparent;
+}
+
+/* END GRID AREA YAAAAY */
+
+
+/* TRYING MY OWN FOOTER */
+.footer2{
+    background-color:var(--dark-color);
+    display:grid;
+    padding:50px;
+    grid-template-rows: 8em 8em 8em 8em;
+}
+
+
+.footer2{
+    color:rgb(221, 221, 221);
+    padding:30px;
+    grid-column:1;
+    grid-row:1;
+    
+}
+
+/* puppy pic will go here */
+
+.puppypumpkin{
+    grid-column: 4;
+    grid-row:2/5;
+    z-index: 3;
+    background-image: url("images/dan-nov1.jpg");
+}
+.puppypumpkin p{
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top:20em;
+    transition: all 0.4s;
+}
+.puppypumpkin:hover{
+    cursor:pointer;
+}
+
+
+/* TIME FOR LEFT SET */
+
+/* the little underline */
+.bigboy-underline2{
+    text-transform: uppercase;
+}
+.bigboy-underline2 p::after{
+    content:'';
+
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: var(--secondary-color);
+    content: "";
+    margin-top: 16px;
+}
+/* END little underline */
+
+/* working on the links display */
+li{
+    list-style: none;
+    line-height: 2em;
+    flex-wrap:wrap;
+    font-size: 20px;
+    padding:10px;
+    /* background-color: rgb(40, 58, 52); */
+}
+/* --------------------------------------------------------------------------------------------- */
+.left-set{
+    margin-top:6em;
+}
+.left-set p{
+    color:var(--secondary-color);
+    padding-bottom:10px;
+    margin-left:10px;
+    font-weight: bold;
+}
+.left-set a{
+    text-decoration: none;
+    color:white;
+    transition: all 0.3s;
+}
+.left-set a:hover{
+    color:var(--dark-gray);
+}
+
+/* middle */
+.middle-set{
+    margin-top:9em;
+}
+.middle-set a{
+    text-decoration: none;
+    color:white;
+    transition: all 0.3s;
+}
+.middle-set a:hover{
+    color:var(--dark-gray);
+}
+
+
+/* rigth */
+
+.right-set{
+    margin-top:9em;
+}
+
+.right-set a{
+    text-decoration: none;
+    color:white;
+    transition: all 0.3s;
+}
+.right-set a:hover{
+    color:var(--dark-gray);
+}
+.under-right-set{
+    margin-left:5em;
+}
+
+/* VISITING KALE */
+.footer3{
+    background-color:var(--dark-color);
+    display:grid;
+    padding:50px;
+    grid-template-rows: 5em 5em 5em 5em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top:-15em;
+}
+
+.footer3{
+    color:rgb(221, 221, 221);
+    padding:30px;
+}
+
+
+
+/* FOOTER-like lower FOOTER W/ SOCIAL LINKS */
+.final-bottom{
+    background-color:var(--dark-color);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding:40px;
+    font-size: 18px;
+}
+/* little horizontal line */
+.final-bottom::before{
+    content:'';
+
+    display: block;
+    width: 70em;
+    height: 1px;
+    background-color: var(--grey-color);
+    margin-top: -25px;
+}
+
+
+/* content */
+.left-idk{
+    color:var(--grey-color);
+    width:65%;
+}
+.left-idk a{
+    color:#d8d8d8;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.left-idk a:hover{
+    color:var(--dark-gray);
+}
+
+.left-idk p{
+    width:40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* ---'all rights reserved' */
+.two{
+    margin-left:16em;
+    margin-top:-20px;
+}
+.two p::before{
+    font-size: 1.125rem;
+    content: "\2022";
+    display: inline-block;
+    padding: 0 18px 0 0px;
+}
+/* ---'footer: contact web editor' */
+.three{
+    margin-left:26em;
+    margin-top:-20px;
+}
+.three a::before{
+    color:var(--grey-color);
+    font-size: 1.125rem;
+    content: "\2022";
+    display: inline-block;
+    padding: 0 18px 0 10px;
+}
+
+
+/* icons on RIGHT */
+
+.right-social-media{
+    width:30%;
+    margin-left:3em;      
+}
+
+.right-social-media a{
+    text-decoration: none;
+    color:#d8d8d8;
+    margin:8px;  
+    float:right;
+    font-size: 18px;
+    transition: all 0.4s;
+}
+.right-social-media a:hover{
+    color:#4a4a4a;
+
+}
+
+.fab{
+    color:#d8d8d8;
+    transition: all 0.2s;
+}
+.fab:hover{
+    color:#4a4a4a;
+}
+.fas:hover{
+    color:#4a4a4a;
+}
+/* ----------------- ----  */
